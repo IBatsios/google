@@ -1,6 +1,5 @@
 <?php
     require_once __DIR__ . '/header.php';
-    require_once __DIR__ . '/app/fb_setup.php';
     require_once __DIR__ . '/app/gm_setup.php';
     require_once __DIR__ . '/app/loginScript.php';
 ?>
@@ -28,14 +27,7 @@
                 </p>
                 <h2>OR</h2>
                <p>
-                   <a href="<?= $callbackUrl ?>" class="btn btn-primary btn-lg btn-block">Login With Facebook</a>
-               </p>
-               <p>
                    <a href="<?= $googleLoginUrl ?>" class="btn btn-danger btn-lg btn-block">Login With Google</a>
-               </p>
-
-               <p>
-                   <a href="" class="btn github btn-lg btn-block">Login With GitHub</a>
                </p>
             <?php endif; ?>
         </div>

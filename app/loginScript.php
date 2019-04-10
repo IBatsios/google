@@ -1,6 +1,5 @@
 <?php
 require_once  __DIR__ . '/database.php';
-require_once __DIR__ . '/fb_setup.php';
 require_once __DIR__ . '/gm_setup.php';
 
 
@@ -10,7 +9,7 @@ if(isset($_POST['submitBtn'], $_POST['email'])){
     //do your validation here
     
     try{
-           $query = "SELECT * FROM users WHERE email = :email AND password = :password";
+           $query = "SELECT * FROM login WHERE email = :email AND password = :password";
            $statement = $db->prepare($query);
            $statement->execute([':email' => $email, ':password' => $password]);
            
